@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamTango - Join the Waitlist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9d720d09b4.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+            background: linear-gradient(135deg, #FFF7ED 0%, #F8FAFC 50%, #FFF1F2 100%);
+            color: #0F172A;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Background gradient orbs */
+        .bg-orb {
+            position: absolute;
+            border-radius: 9999px;
+            filter: blur(100px);
+            pointer-events: none;
+        }
+
+        .orb-1 {
+            top: -10rem;
+            right: -10rem;
+            width: 20rem;
+            height: 20rem;
+            background-color: #FB923C;
+            opacity: 0.2;
+        }
+
+        .orb-2 {
+            bottom: -10rem;
+            left: -10rem;
+            width: 20rem;
+            height: 20rem;
+            background-color: #FDB87C;
+            opacity: 0.2;
+        }
+
+        .orb-3 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24rem;
+            height: 24rem;
+            background-color: #F97316;
+            opacity: 0.1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 72rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+                max-width: 32rem;
+                gap: 2rem;
+            }
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeInLeft 0.8s ease-out;
+        }
+
+        .form-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            box-shadow: 0 20px 60px rgba(249, 115, 22, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+            transition: all 300ms ease;
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        .form-card:hover {
+            box-shadow: 0 25px 70px rgba(249, 115, 22, 0.15), 0 10px 20px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        .logo-text {
+            margin-left: 1rem;
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #F97316, #EA580C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.25rem;
+            color: #64748B;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            max-width: 90%;
+        }
+
+        .form-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-card .form-subtitle {
+            font-size: 0.9375rem;
+            color: #64748B;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #334155;
+            margin-bottom: 0.25rem;
+        }
+
+        .required {
+            color: #EF4444;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 0.875rem 1.25rem;
+            font-size: 1rem;
+            font-family: inherit;
+            color: #0F172A;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid #E2E8F0;
+            border-radius: 0.875rem;
+            outline: none;
+            transition: all 200ms;
+        }
+
+        input[type="email"]:focus {
+            border-color: #F97316;
+            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+            transform: translateY(-1px);
+        }
+
+        input[type="email"]:hover {
+            border-color: #FDB87C;
+        }
+
+        input[type="email"]::placeholder {
+            color: #94A3B8;
+        }
+
+        .button {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1.0625rem;
+            font-weight: 600;
+            font-family: inherit;
+            color: white;
+            background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+            border: none;
+            border-radius: 0.875rem;
+            cursor: pointer;
+            transition: all 250ms ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
+            opacity: 0;
+            transition: opacity 250ms ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
+        }
+
+        .button:hover::before {
+            opacity: 1;
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .button:disabled {
+            background: #CBD5E1;
+            box-shadow: none;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .success-message {
+            display: none;
+            padding: 1rem 1.25rem;
+            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+            border: 2px solid #BBF7D0;
+            border-radius: 0.875rem;
+            color: #15803D;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            margin-top: 1.25rem;
+            text-align: center;
+            animation: slideInUp 0.4s ease-out;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .error-message {
+            color: #DC2626;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .features {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 250ms ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            background-color: rgba(255, 247, 237, 0.7);
+            border-color: #FED7AA;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(249, 115, 22, 0.15);
+        }
+
+        .feature-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: linear-gradient(135deg, #FFF7ED, #FFEDD5);
+            border: 1px solid #FED7AA;
+            border-radius: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            transition: transform 250ms ease;
+            color: #F97316;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .feature-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0F172A;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            font-size: 0.875rem;
+            color: #64748B;
+            line-height: 1.5;
+        }
+
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.25rem;
+            background-color: rgba(255, 247, 237, 0.6);
+            border: 1px solid #FED7AA;
+            border-radius: 0.875rem;
+            margin-top: 1.5rem;
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        .social-proof-avatars {
+            display: flex;
+            margin-left: -0.5rem;
+        }
+
+        .social-proof-avatar {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 9999px;
+            border: 2px solid white;
+            margin-left: -0.5rem;
+            background: linear-gradient(135deg, #F97316, #EA580C);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .social-proof-text {
+            font-size: 0.875rem;
+            color: #475569;
+        }
+
+        .social-proof-text strong {
+            color: #F97316;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1024px) {
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.125rem;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 0.5rem;
+            }
+
+            .form-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1rem;
+            }
+
+            .logo {
+                width: 3rem;
+                height: 3rem;
+            }
+
+            .logo-text {
+                font-size: 1.5rem;
+            }
+
+            .features {
+                margin-top: 2rem;
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card {
+                padding: 1.25rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Loading spinner */
+        .spinner {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background gradient orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="teamtango-logo.png" alt="TeamTango" class="logo">
+                <div class="logo-text">TeamTango</div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <h1>Transform How Your Team Celebrates</h1>
+                <p class="subtitle">Join the waitlist and be the first to experience the platform that helps teams build stronger connections through celebrations, recognition, and seamless time-off management.</p>
+            </div>
+
+            <!-- Features -->
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                    <div class="feature-title">Celebrate Team Milestones</div>
+                    <div class="feature-description">Automated birthday and work anniversary reminders keep your team connected</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-hands-clapping"></i></div>
+                    <div class="feature-title">Recognize Great Work</div>
+                    <div class="feature-description">Send kudos and peer recognition to boost employee engagement</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                    <div class="feature-title">Track Time Off</div>
+                    <div class="feature-description">Simplify team holiday management with our intuitive PTO tracker</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-brands fa-slack"></i></div>
+                    <div class="feature-title">Integrate With Slack</div>
+                    <div class="feature-description">Celebrate and manage everything directly within your Slack workspace</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="form-card">
+            <h2>Join the Waitlist</h2>
+            <p class="form-subtitle">Get early access and exclusive updates on our launch</p>
+
+            <!-- Waitlist Form -->
+            <form id="waitlistForm">
+                <div class="form-group">
+                    <label for="email">
+                        Email address
+                        <span class="required">*</span>
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@company.com"
+                        required
+                        autocomplete="email"
+                    >
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <button type="submit" class="button" id="submitBtn">
+                    <span id="buttonText">Join Waitlist</span>
+                </button>
+
+                <div class="success-message" id="successMessage">
+                    🎉 Thank you! You've been added to the waitlist. We'll be in touch soon!
+                </div>
+            </form>
+
+            <!-- Social Proof -->
+            <div class="social-proof">
+                <div class="social-proof-avatars">
+                    <div class="social-proof-avatar">A</div>
+                    <div class="social-proof-avatar">M</div>
+                    <div class="social-proof-avatar">S</div>
+                    <div class="social-proof-avatar">J</div>
+                </div>
+                <div class="social-proof-text">
+                    Join teams already on the waitlist
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('waitlistForm');
+        const emailInput = document.getElementById('email');
+        const submitBtn = document.getElementById('submitBtn');
+        const buttonText = document.getElementById('buttonText');
+        const successMessage = document.getElementById('successMessage');
+        const emailError = document.getElementById('emailError');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Clear previous errors
+            emailError.classList.remove('show');
+            emailError.textContent = '';
+            successMessage.classList.remove('show');
+
+            const email = emailInput.value.trim();
+
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailError.textContent = 'Please enter a valid email address';
+                emailError.classList.add('show');
+                return;
+            }
+
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            buttonText.innerHTML = '<span class="spinner"></span><span>Joining...</span>';
+
+            try {
+                const response = await fetch('/api/waitlist', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email }),
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Failed to join waitlist');
+                }
+
+                // Show success message
+                successMessage.classList.add('show');
+                emailInput.value = '';
+
+                // Reset button after a delay
+                setTimeout(() => {
+                    buttonText.textContent = 'Join Waitlist';
+                    submitBtn.disabled = false;
+                }, 2000);
+
+            } catch (error) {
+                // Show error message
+                emailError.textContent = error.message || 'Something went wrong. Please try again.';
+                emailError.classList.add('show');
+                buttonText.textContent = 'Join Waitlist';
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Clear error on input
+        emailInput.addEventListener('input', () => {
+            emailError.classList.remove('show');
+        });
+    </script>
+</body>
+</html>
