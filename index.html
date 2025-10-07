@@ -3,16 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeamTango - Join the Waitlist</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/9d720d09b4.js" crossorigin="anonymous"></script>
+
+    <!-- Primary Meta Tags -->
+    <title>TeamTango - Where Teams Connect, Celebrate, and Thrive | Join Waitlist</title>
+    <meta name="title" content="TeamTango - Where Teams Connect, Celebrate, and Thrive | Join Waitlist">
+    <meta name="description" content="The all-in-one team engagement platform. Share highlights, give kudos, celebrate milestones, and manage time off. Built for remote, hybrid, and in-office teams who care about culture. Join the waitlist!">
+    <meta name="keywords" content="team engagement platform, employee recognition, team wall, kudos system, PTO management, team celebrations, peer recognition, team insights, organizational chart, remote team culture">
+    <meta name="author" content="TeamTango">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teamtango.com/">
+    <meta property="og:title" content="TeamTango - Where Teams Connect, Celebrate, and Thrive">
+    <meta property="og:description" content="The all-in-one team engagement platform. Share highlights, give kudos, celebrate milestones, and manage time off. Built for teams who care about culture.">
+    <meta property="og:image" content="https://teamtango.com/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://teamtango.com/">
+    <meta property="twitter:title" content="TeamTango - Where Teams Connect, Celebrate, and Thrive">
+    <meta property="twitter:description" content="The all-in-one team engagement platform. Share highlights, give kudos, celebrate milestones, and manage time off.">
+    <meta property="twitter:image" content="https://teamtango.com/twitter-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://teamtango.com/">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link rel="dns-prefetch" href="https://fonts.bunny.net">
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+
+    <!-- Fonts - Using bunny.net for GDPR compliance -->
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9d720d09b4.js" crossorigin="anonymous" defer></script>
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "TeamTango",
+      "description": "All-in-one team engagement platform for sharing highlights, giving kudos, celebrating milestones, and managing time off",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "operatingSystem": "Web-based",
+      "featureList": [
+        "Team wall with smart post categorization (highlights, kudos, challenges)",
+        "Peer recognition with @mentions and emoji reactions",
+        "Automated birthday and work anniversary celebrations",
+        "PTO and time-off management with approval workflows",
+        "Team insights and engagement analytics",
+        "Visual org charts and team directory"
+      ]
+    }
+    </script>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
         }
 
         body {
@@ -68,18 +133,19 @@
             position: relative;
             z-index: 10;
             width: 100%;
-            max-width: 72rem;
+            max-width: 90rem;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            padding: 2rem 0;
         }
 
         @media (max-width: 1024px) {
             .container {
                 grid-template-columns: 1fr;
-                max-width: 32rem;
-                gap: 2rem;
+                max-width: 42rem;
+                gap: 3rem;
             }
         }
 
@@ -288,7 +354,7 @@
             margin-top: 3rem;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
 
         .feature-card {
@@ -296,9 +362,12 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(226, 232, 240, 0.6);
             border-radius: 1rem;
-            padding: 1.5rem;
+            padding: 1.25rem;
             transition: all 250ms ease;
-            text-align: center;
+            text-align: left;
+            display: flex;
+            align-items: start;
+            gap: 1rem;
         }
 
         .feature-card:hover {
@@ -309,33 +378,40 @@
         }
 
         .feature-icon {
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 2.75rem;
+            height: 2.75rem;
+            min-width: 2.75rem;
             background: linear-gradient(135deg, #FFF7ED, #FFEDD5);
             border: 1px solid #FED7AA;
-            border-radius: 0.875rem;
-            display: inline-flex;
+            border-radius: 0.75rem;
+            display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.25rem;
             transition: transform 250ms ease;
             color: #F97316;
         }
 
         .feature-card:hover .feature-icon {
-            transform: scale(1.1) rotate(5deg);
+            transform: scale(1.08);
+        }
+
+        .feature-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
         }
 
         .feature-title {
-            font-size: 1rem;
+            font-size: 0.9375rem;
             font-weight: 600;
             color: #0F172A;
-            margin-bottom: 0.5rem;
+            line-height: 1.3;
         }
 
         .feature-description {
-            font-size: 0.875rem;
+            font-size: 0.8125rem;
             color: #64748B;
             line-height: 1.5;
         }
@@ -384,10 +460,6 @@
         }
 
         @media (max-width: 1024px) {
-            .features {
-                grid-template-columns: 1fr 1fr;
-            }
-
             .hero-content h1 {
                 font-size: 2.5rem;
             }
@@ -395,6 +467,13 @@
             .hero-content .subtitle {
                 font-size: 1.125rem;
                 max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
         }
 
@@ -426,11 +505,10 @@
 
             .features {
                 margin-top: 2rem;
-                grid-template-columns: 1fr;
             }
 
             .feature-card {
-                padding: 1.25rem;
+                padding: 1rem;
             }
         }
 
@@ -517,61 +595,83 @@
 </head>
 <body>
     <!-- Background gradient orbs -->
-    <div class="bg-orb orb-1"></div>
-    <div class="bg-orb orb-2"></div>
-    <div class="bg-orb orb-3"></div>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+    <div class="bg-orb orb-3" aria-hidden="true"></div>
 
-    <div class="container">
+    <main class="container">
         <!-- Hero Section -->
-        <div class="hero-section">
+        <section class="hero-section" aria-labelledby="hero-heading">
             <!-- Logo -->
-            <div class="logo-container">
-                <img src="teamtango-logo.png" alt="TeamTango" class="logo">
-                <div class="logo-text">TeamTango</div>
-            </div>
+            <header class="logo-container">
+                <img src="teamtango-logo.png" alt="TeamTango Logo" class="logo" width="64" height="64">
+                <h2 class="logo-text">TeamTango</h2>
+            </header>
 
             <!-- Hero Content -->
-            <div class="hero-content">
-                <h1>Transform How Your Team Celebrates</h1>
-                <p class="subtitle">Join the waitlist and be the first to experience the platform that helps teams build stronger connections through celebrations, recognition, and seamless time-off management.</p>
-            </div>
+            <article class="hero-content">
+                <h1 id="hero-heading">Where Teams Connect, Celebrate, and Thrive</h1>
+                <p class="subtitle">The all-in-one team engagement platform. Share highlights, give kudos, celebrate milestones, and manage time off. Built for remote, hybrid, and in-office teams who care about culture.</p>
+            </article>
 
             <!-- Features -->
-            <div class="features">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fa-solid fa-cake-candles"></i></div>
-                    <div class="feature-title">Celebrate Team Milestones</div>
-                    <div class="feature-description">Automated birthday and work anniversary reminders keep your team connected</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fa-solid fa-hands-clapping"></i></div>
-                    <div class="feature-title">Recognize Great Work</div>
-                    <div class="feature-description">Send kudos and peer recognition to boost employee engagement</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
-                    <div class="feature-title">Track Time Off</div>
-                    <div class="feature-description">Simplify team holiday management with our intuitive PTO tracker</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fa-brands fa-slack"></i></div>
-                    <div class="feature-title">Integrate With Slack</div>
-                    <div class="feature-description">Celebrate and manage everything directly within your Slack workspace</div>
-                </div>
-            </div>
-        </div>
+            <section class="features" aria-label="Key Features">
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="fa-solid fa-sparkles"></i></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Team Wall & Smart Posts</h3>
+                        <p class="feature-description">Share highlights, kudos, and challenges with AI-powered auto-categorization and @mentions</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="fa-solid fa-hands-clapping"></i></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Recognition & Reactions</h3>
+                        <p class="feature-description">Give kudos with @mentions and emoji reactions to build a culture of appreciation</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="fa-solid fa-cake-candles"></i></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Automated Celebrations</h3>
+                        <p class="feature-description">Never miss birthdays or work anniversaries with automatic team-wide notifications</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="fa-solid fa-umbrella-beach"></i></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">PTO Management</h3>
+                        <p class="feature-description">Request time off, track balances, manage approvals, and view team availability</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Team Insights</h3>
+                        <p class="feature-description">Track engagement metrics, top contributors, and activity patterns with visual dashboards</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Org Management</h3>
+                        <p class="feature-description">Visual org charts, department hierarchies, and searchable team directory</p>
+                    </div>
+                </article>
+            </section>
+        </section>
 
         <!-- Form Card -->
-        <div class="form-card">
-            <h2>Join the Waitlist</h2>
+        <aside class="form-card" aria-labelledby="waitlist-heading">
+            <h2 id="waitlist-heading">Join the Waitlist</h2>
             <p class="form-subtitle">Get early access and exclusive updates on our launch</p>
 
             <!-- Waitlist Form -->
-            <form id="waitlistForm">
+            <form id="waitlistForm" aria-label="Waitlist signup form">
                 <div class="form-group">
                     <label for="email">
                         Email address
-                        <span class="required">*</span>
+                        <span class="required" aria-label="required">*</span>
                     </label>
                     <input
                         type="email"
@@ -580,33 +680,40 @@
                         placeholder="you@company.com"
                         required
                         autocomplete="email"
+                        aria-describedby="emailError"
+                        aria-required="true"
                     >
-                    <div class="error-message" id="emailError"></div>
+                    <div class="error-message" id="emailError" role="alert" aria-live="polite"></div>
                 </div>
 
-                <button type="submit" class="button" id="submitBtn">
+                <button type="submit" class="button" id="submitBtn" aria-label="Submit waitlist form">
                     <span id="buttonText">Join Waitlist</span>
                 </button>
 
-                <div class="success-message" id="successMessage">
+                <div class="success-message" id="successMessage" role="status" aria-live="polite">
                     🎉 Thank you! You've been added to the waitlist. We'll be in touch soon!
                 </div>
             </form>
 
             <!-- Social Proof -->
-            <div class="social-proof">
-                <div class="social-proof-avatars">
+            <div class="social-proof" aria-label="Social proof">
+                <div class="social-proof-avatars" aria-hidden="true">
                     <div class="social-proof-avatar">A</div>
                     <div class="social-proof-avatar">M</div>
                     <div class="social-proof-avatar">S</div>
                     <div class="social-proof-avatar">J</div>
                 </div>
-                <div class="social-proof-text">
+                <p class="social-proof-text">
                     Join teams already on the waitlist
-                </div>
+                </p>
             </div>
-        </div>
-    </div>
+        </aside>
+    </main>
+
+    <!-- Footer for SEO -->
+    <footer style="position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); text-align: center; font-size: 0.75rem; color: #94A3B8; z-index: 5;">
+        <p>&copy; 2025 TeamTango. All rights reserved.</p>
+    </footer>
 
     <script>
         const form = document.getElementById('waitlistForm');
