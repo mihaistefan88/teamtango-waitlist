@@ -29,3 +29,6 @@ TeamTango complements chat tools (Slack, Microsoft Teams) rather than replacing 
 
 - [Waitlist and product overview](https://teamtango.io/): the landing page, including a feature FAQ
 - [Roadmap](https://teamtango.io/roadmap): what's shipped (team wall, kudos, events, gift funds, time off, org management), in progress (AI post categorization, insights, real-time feed), and planned (automations, integrations, multi-language)
+- [Changelog](https://teamtango.io/changelog): dated release history, also available as RSS at https://teamtango.io/feed.xml
+- [TeamTango vs Workvivo](https://teamtango.io/vs/workvivo): Workvivo targets enterprises; TeamTango is the lightweight alternative for small/mid-size teams with built-in time-off management
+- [TeamTango vs Slack](https://teamtango.io/vs/slack): TeamTango complements chat rather than replacing it — a persistent culture layer for recognition, celebrations, and PTO

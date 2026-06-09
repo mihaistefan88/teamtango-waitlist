@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TeamTango vs Slack - Why Chat Isn't a Culture Tool</title>
+    <meta name="title" content="TeamTango vs Slack - Why Chat Isn't a Culture Tool">
+    <meta name="description" content="TeamTango doesn't replace Slack — it fixes what chat is bad at. Kudos and celebrations scroll away in minutes in a chat tool; TeamTango keeps recognition, milestones, and time off on a persistent team wall.">
+    <meta name="author" content="TeamTango">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f8fcff">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teamtango.io/vs/slack">
+    <meta property="og:site_name" content="TeamTango">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="TeamTango vs Slack">
+    <meta property="og:description" content="TeamTango doesn't replace Slack — it fixes what chat is bad at: recognition that scrolls away, missed milestones, and time off lost in threads.">
+    <meta property="og:image" content="https://teamtango.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://teamtango.io/vs/slack">
+    <meta property="twitter:title" content="TeamTango vs Slack">
+    <meta property="twitter:description" content="TeamTango doesn't replace Slack — it fixes what chat is bad at.">
+    <meta property="twitter:image" content="https://teamtango.io/og-image.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="canonical" href="https://teamtango.io/vs/slack">
+
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9d720d09b4.js" crossorigin="anonymous" defer></script>
+
+    <!-- Privacy-friendly analytics (umami, self-hosted) -->
+    <script defer src="https://analytics.webarch.ro/script.js" data-website-id="ed2d1e4b-2423-433c-a028-f5c64a91d345"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://teamtango.io/vs/slack#webpage",
+          "url": "https://teamtango.io/vs/slack",
+          "name": "TeamTango vs Slack",
+          "description": "TeamTango complements chat tools like Slack: a persistent culture layer for recognition, celebrations, and time off.",
+          "isPartOf": { "@id": "https://teamtango.io/#website" },
+          "about": { "@id": "https://teamtango.io/#software" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "TeamTango", "item": "https://teamtango.io/" },
+            { "@type": "ListItem", "position": 2, "name": "TeamTango vs Slack", "item": "https://teamtango.io/vs/slack" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://teamtango.io/vs/slack#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Does TeamTango replace Slack?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No — and it doesn't try to. Slack is where work conversations happen. TeamTango is the persistent culture layer next to it: kudos, celebrations, team events, and time off live on a team wall where they stay visible, instead of scrolling away in a channel. Many teams will use both, and a Slack integration is on the TeamTango roadmap."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why not just use a #kudos channel in Slack?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A #kudos channel works for a week. Then messages scroll away, nobody sees recognition older than a day, birthdays still get missed, there's no participation signal, and time off lives in yet another tool. TeamTango keeps recognition persistent and browsable, automates celebrations, tracks engagement, and includes proper time-off management with approvals and balances."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root {
+            --orange-50:  #fff7ed;
+            --orange-100: #ffedd5;
+            --orange-400: #fba468;
+            --orange-500: #f97316;
+            --orange-700: #c2410c;
+            --slate-100: #f8fafc;
+            --slate-200: #eef2f6;
+            --slate-300: #d3d9e2;
+            --slate-400: #a7b1be;
+            --slate-500: #7b8798;
+            --slate-600: #5b6273;
+            --slate-800: #272e40;
+            --slate-900: #0f172b;
+            --green-100: #e3f4e9;
+            --green-700: #2f7d49;
+            --radius: 1.25rem;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; scrollbar-width: thin; scrollbar-color: var(--slate-300) transparent; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--slate-300); border-radius: 20px; border: 2px solid transparent; background-clip: padding-box; }
+        html { overflow-x: hidden; scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+            background-image: linear-gradient(to bottom, #f8fcff 0%, #edf3fa 100%);
+            background-attachment: fixed;
+            color: var(--slate-900);
+            min-height: 100vh;
+        }
+        .page { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 2rem; }
+        .nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 3rem; }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { width: 2.25rem; height: 2.25rem; }
+        .nav-logo span { margin-left: 0.625rem; font-size: 1.125rem; font-weight: 600; color: var(--slate-800); }
+        .button {
+            padding: 0.625rem 1.25rem; font-size: 0.9375rem; font-weight: 500; color: white;
+            background-color: var(--orange-400); border: none; border-radius: var(--radius);
+            text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;
+            transition: background-color 200ms ease;
+        }
+        .button:hover { background-color: var(--orange-500); }
+
+        .header { text-align: center; margin-bottom: 2.5rem; }
+        .header h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.875rem; }
+        .header p { font-size: 1.0625rem; color: var(--slate-600); line-height: 1.6; max-width: 36rem; margin: 0 auto; }
+
+        .verdict {
+            background-color: var(--orange-50);
+            border: 1px solid var(--orange-100);
+            border-radius: var(--radius);
+            padding: 1.375rem 1.5rem;
+            margin-bottom: 2.5rem;
+            font-size: 0.9375rem;
+            color: var(--slate-800);
+            line-height: 1.65;
+        }
+        .verdict strong { color: var(--orange-700); }
+
+        .card {
+            background-color: white;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+        }
+        table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+        th, td { padding: 0.875rem 1.125rem; text-align: left; border-bottom: 1px solid var(--slate-200); vertical-align: top; }
+        tr:last-child td { border-bottom: none; }
+        th { background-color: var(--slate-100); font-weight: 600; color: var(--slate-800); font-size: 0.8125rem; }
+        td:first-child { font-weight: 500; color: var(--slate-800); width: 30%; }
+        td { color: var(--slate-600); line-height: 1.5; }
+        td .yes { color: var(--green-700); }
+        td .no { color: var(--slate-400); }
+
+        .prose { margin-bottom: 2.5rem; }
+        .prose h2 { font-size: 1.375rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .prose p { font-size: 0.9375rem; color: var(--slate-600); line-height: 1.7; margin-bottom: 1rem; }
+
+        .faq-item { background: white; border: 1px solid var(--slate-200); border-radius: var(--radius); padding: 1.375rem 1.5rem; margin-bottom: 0.75rem; }
+        .faq-item h3 { font-size: 0.9375rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .faq-item p { font-size: 0.9023rem; color: var(--slate-600); line-height: 1.65; }
+
+        .cta-card {
+            background-color: white; border: 1px solid var(--slate-200); border-radius: var(--radius);
+            padding: 2.25rem 2rem; text-align: center; margin-top: 3rem;
+        }
+        .cta-card h2 { font-size: 1.375rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .cta-card p { font-size: 0.9375rem; color: var(--slate-500); margin-bottom: 1.5rem; }
+
+        footer { text-align: center; font-size: 0.75rem; color: var(--slate-400); margin-top: 3rem; line-height: 1.8; }
+        footer a { color: var(--slate-500); }
+
+        @media (max-width: 640px) {
+            .header h1 { font-size: 1.75rem; }
+            th, td { padding: 0.625rem 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="nav-logo" href="/">
+                <img src="/teamtango-logo.png" alt="TeamTango logo" width="36" height="36">
+                <span>TeamTango</span>
+            </a>
+            <a class="button" href="/">Join Waitlist</a>
+        </nav>
+
+        <header class="header">
+            <h1>TeamTango vs Slack</h1>
+            <p>Trick question — you'll probably use both. Here's what chat is great at, and what it quietly loses.</p>
+        </header>
+
+        <div class="verdict">
+            <strong>TL;DR:</strong> Slack is where work conversations happen, and TeamTango doesn't try to replace it. But chat is ephemeral by design — kudos scroll away in minutes, birthdays get missed, and time off drowns in threads. TeamTango is the persistent culture layer next to your chat: recognition, celebrations, events, and PTO that stay visible and measurable. TeamTango is in development — <a href="/">join the waitlist</a>.
+        </div>
+
+        <div class="card">
+            <table>
+                <thead>
+                    <tr><th scope="col"></th><th scope="col">TeamTango</th><th scope="col">Slack (or any chat tool)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Primary job</td><td>Team culture: recognition, celebrations, time off</td><td>Real-time conversation</td></tr>
+                    <tr><td>Content lifespan</td><td>Persistent wall — browsable history of wins &amp; kudos</td><td>Minutes to hours before it scrolls away</td></tr>
+                    <tr><td>Recognition</td><td><span class="yes">First-class</span> — kudos posts with @mentions, reactions, comment threads</td><td>A #kudos channel that fades fast</td></tr>
+                    <tr><td>Celebrations</td><td><span class="yes">Automated</span> — birthdays &amp; anniversaries posted for the team</td><td><span class="no">Manual</span> — someone has to remember</td></tr>
+                    <tr><td>Time off</td><td><span class="yes">Built in</span> — requests, approvals, balances, team calendar</td><td><span class="no">Not a feature</span> — status emojis and threads</td></tr>
+                    <tr><td>Engagement signal</td><td><span class="yes">Measured</span> — participation, trends, team pulse</td><td><span class="no">Invisible</span></td></tr>
+                    <tr><td>Noise level</td><td>Low — a feed you check, not a firehose</td><td>High — that's the point of chat</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section class="prose">
+            <h2>Chat is a firehose. Culture needs a shelf.</h2>
+            <p>Every team has watched it happen: someone posts a heartfelt thank-you in the team channel, three people react, and by lunchtime it's buried under deploy notifications and lunch plans. The recognition happened — and then it effectively didn't. New joiners can't see it, the person's manager misses it, and six months later there's no trace of who's been lifting the team.</p>
+            <p>TeamTango gives those moments a permanent home. Kudos, milestones, celebrations, and events live on a team wall where they stay visible, accumulate into a story of the team, and feed an engagement pulse you can actually read.</p>
+        </section>
+
+        <section class="prose">
+            <h2>Better together</h2>
+            <p>The healthy setup isn't either/or: chat stays the place for fast conversation, and TeamTango is where the durable stuff lands. A Slack integration — posting wall highlights into a channel, and capturing kudos from chat — is on our <a href="/roadmap">roadmap</a>.</p>
+        </section>
+
+        <section aria-labelledby="faq-heading">
+            <div class="prose"><h2 id="faq-heading">Common questions</h2></div>
+            <div class="faq-item">
+                <h3>Does TeamTango replace Slack?</h3>
+                <p>No — and it doesn't try to. Slack is where work conversations happen. TeamTango is the persistent culture layer next to it. Many teams will use both, and a Slack integration is on the roadmap.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Why not just use a #kudos channel?</h3>
+                <p>A #kudos channel works for a week. Then messages scroll away, nobody sees recognition older than a day, birthdays still get missed, there's no participation signal, and time off lives in yet another tool. TeamTango keeps recognition persistent, automates celebrations, measures engagement, and includes proper time-off management.</p>
+            </div>
+        </section>
+
+        <section class="cta-card" aria-label="Join the waitlist">
+            <h2>Give your team's wins a permanent home</h2>
+            <p>Join the waitlist for early access when TeamTango launches.</p>
+            <a class="button" href="/">Join the Waitlist</a>
+        </section>
+
+        <footer>
+            <p><a href="/">Home</a> &middot; <a href="/roadmap">Roadmap</a> &middot; <a href="/changelog">Changelog</a> &middot; <a href="/vs/workvivo">vs Workvivo</a></p>
+            <p>Slack is a trademark of Salesforce, Inc. This comparison reflects publicly available information as of June 2026.</p>
+            <p>&copy; 2026 TeamTango. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

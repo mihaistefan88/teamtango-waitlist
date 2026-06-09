@@ -15,9 +15,31 @@ app.set('trust proxy', 1);
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+// 301 *.html -> clean URLs (avoid duplicate-content URLs alongside canonicals)
+app.use((req, res, next) => {
+    if (req.method === 'GET' && req.path.endsWith('.html')) {
+        const clean = req.path === '/index.html' ? '/' : req.path.slice(0, -5);
+        return res.redirect(301, clean);
+    }
+    next();
+});
+
 // Only the public/ dir is web-served — keeps emails.json and server source private
 // extensions: clean URLs (/roadmap -> roadmap.html)
-app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
+// Assets cache for a year (filenames are stable, content changes with deploys are
+// rare and tolerable); HTML/xml/txt revalidate so content updates show immediately
+app.use(express.static(path.join(__dirname, 'public'), {
+    extensions: ['html'],
+    maxAge: '365d',
+    immutable: true,
+    setHeaders: (res, filePath) => {
+        if (filePath.endsWith('.html')) {
+            res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+        } else if (/\.(xml|txt)$/.test(filePath)) {
+            res.setHeader('Cache-Control', 'public, max-age=3600');
+        }
+    }
+}));
 
 const waitlistLimiter = rateLimit({
     windowMs: 60 * 60 * 1000, // 1 hour
@@ -152,6 +174,11 @@ app.get('/api/waitlist/all', async (req, res) => {
         console.error('Error getting emails:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
+});
+
+// Custom 404 (registered after static + API routes)
+app.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 
 // Start server

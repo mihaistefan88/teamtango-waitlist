@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Changelog | TeamTango - What We've Shipped</title>
+    <meta name="title" content="Changelog | TeamTango - What We've Shipped">
+    <meta name="description" content="The TeamTango changelog: dated releases of what we've shipped — events, comments, gift funds, time-off management, people directory, and more. Updated as we build.">
+    <meta name="author" content="TeamTango">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f8fcff">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teamtango.io/changelog">
+    <meta property="og:site_name" content="TeamTango">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="TeamTango Changelog - What We've Shipped">
+    <meta property="og:description" content="Dated releases of what we've shipped in TeamTango, the team engagement platform.">
+    <meta property="og:image" content="https://teamtango.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://teamtango.io/changelog">
+    <meta property="twitter:title" content="TeamTango Changelog - What We've Shipped">
+    <meta property="twitter:description" content="Dated releases of what we've shipped in TeamTango.">
+    <meta property="twitter:image" content="https://teamtango.io/og-image.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="canonical" href="https://teamtango.io/changelog">
+    <link rel="alternate" type="application/rss+xml" title="TeamTango Changelog" href="/feed.xml">
+
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9d720d09b4.js" crossorigin="anonymous" defer></script>
+
+    <!-- Privacy-friendly analytics (umami, self-hosted) -->
+    <script defer src="https://analytics.webarch.ro/script.js" data-website-id="ed2d1e4b-2423-433c-a028-f5c64a91d345"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://teamtango.io/changelog#webpage",
+          "url": "https://teamtango.io/changelog",
+          "name": "TeamTango Changelog",
+          "description": "Dated releases of what we've shipped in TeamTango.",
+          "isPartOf": { "@id": "https://teamtango.io/#website" },
+          "about": { "@id": "https://teamtango.io/#software" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "TeamTango", "item": "https://teamtango.io/" },
+            { "@type": "ListItem", "position": 2, "name": "Changelog", "item": "https://teamtango.io/changelog" }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root {
+            --orange-50:  #fff7ed;
+            --orange-100: #ffedd5;
+            --orange-400: #fba468;
+            --orange-500: #f97316;
+            --orange-700: #c2410c;
+            --slate-100: #f8fafc;
+            --slate-200: #eef2f6;
+            --slate-300: #d3d9e2;
+            --slate-400: #a7b1be;
+            --slate-500: #7b8798;
+            --slate-600: #5b6273;
+            --slate-800: #272e40;
+            --slate-900: #0f172b;
+            --green-100: #e3f4e9;
+            --green-700: #2f7d49;
+            --magenta-100: #f7e3ea;
+            --magenta-500: #af1846;
+            --radius: 1.25rem;
+        }
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            scrollbar-width: thin;
+            scrollbar-color: var(--slate-300) transparent;
+        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--slate-300); border-radius: 20px; border: 2px solid transparent; background-clip: padding-box; }
+        html { overflow-x: hidden; scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+            background-image: linear-gradient(to bottom, #f8fcff 0%, #edf3fa 100%);
+            background-attachment: fixed;
+            color: var(--slate-900);
+            min-height: 100vh;
+        }
+        .page { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem 2rem; }
+
+        .nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 3.5rem; }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { width: 2.25rem; height: 2.25rem; }
+        .nav-logo span { margin-left: 0.625rem; font-size: 1.125rem; font-weight: 600; color: var(--slate-800); }
+        .button {
+            padding: 0.625rem 1.25rem; font-size: 0.9375rem; font-weight: 500;
+            color: white; background-color: var(--orange-400); border: none;
+            border-radius: var(--radius); cursor: pointer; text-decoration: none;
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            transition: background-color 200ms ease;
+        }
+        .button:hover { background-color: var(--orange-500); }
+
+        .header { text-align: center; margin-bottom: 3rem; animation: fadeInUp 0.6s ease-out; }
+        .header h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.875rem; }
+        .header p { font-size: 1.0625rem; color: var(--slate-600); line-height: 1.6; max-width: 32rem; margin: 0 auto; }
+        .header .rss-link { display: inline-flex; align-items: center; gap: 0.375rem; margin-top: 1rem; font-size: 0.875rem; color: var(--orange-500); text-decoration: none; }
+
+        .timeline { position: relative; }
+        .entry {
+            display: grid;
+            grid-template-columns: 7.5rem 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1.75rem;
+            animation: fadeInUp 0.5s ease-out both;
+        }
+        .entry-date {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--slate-400);
+            padding-top: 1.5rem;
+            text-align: right;
+        }
+        .entry-card {
+            background-color: white;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius);
+            padding: 1.375rem 1.5rem;
+            transition: border-color 200ms ease;
+        }
+        .entry-card:hover { border-color: var(--slate-300); }
+        .tag {
+            display: inline-flex;
+            padding: 0.125rem 0.625rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-bottom: 0.625rem;
+        }
+        .tag.feature { background-color: var(--green-100); color: var(--green-700); }
+        .tag.improvement { background-color: var(--orange-100); color: var(--orange-700); }
+        .tag.design { background-color: var(--magenta-100); color: var(--magenta-500); }
+        .entry-card h2 { font-size: 1.0625rem; font-weight: 600; margin-bottom: 0.375rem; }
+        .entry-card p { font-size: 0.9023rem; color: var(--slate-600); line-height: 1.6; }
+
+        .cta-card {
+            background-color: white; border: 1px solid var(--slate-200);
+            border-radius: var(--radius); padding: 2.25rem 2rem;
+            text-align: center; margin-top: 3rem;
+        }
+        .cta-card h2 { font-size: 1.375rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .cta-card p { font-size: 0.9375rem; color: var(--slate-500); margin-bottom: 1.5rem; }
+
+        footer { text-align: center; font-size: 0.75rem; color: var(--slate-400); margin-top: 3rem; line-height: 1.8; }
+        footer a { color: var(--slate-500); }
+
+        @media (max-width: 640px) {
+            .header h1 { font-size: 1.875rem; }
+            .entry { grid-template-columns: 1fr; gap: 0.375rem; }
+            .entry-date { text-align: left; padding-top: 0; }
+        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="nav-logo" href="/">
+                <img src="/teamtango-logo.png" alt="TeamTango logo" width="36" height="36">
+                <span>TeamTango</span>
+            </a>
+            <a class="button" href="/">Join Waitlist</a>
+        </nav>
+
+        <header class="header">
+            <h1>Changelog</h1>
+            <p>What we've shipped, when. The forward-looking view lives on the <a href="/roadmap">roadmap</a>.</p>
+            <a class="rss-link" href="/feed.xml"><i class="fa-solid fa-rss" aria-hidden="true"></i> Subscribe via RSS</a>
+        </header>
+
+        <section class="timeline" aria-label="Release history">
+            <article class="entry" id="2026-06-10-team-pulse">
+                <div class="entry-date">Jun 10, 2026</div>
+                <div class="entry-card">
+                    <span class="tag feature">Feature</span>
+                    <h2>Team Pulse runs on live data</h2>
+                    <p>The dashboard stat cards — kudos sent, posts created, engagements, participation rate — now compute from your team's real activity, with week-over-week trends.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="2026-06-10-events">
+                <div class="entry-date">Jun 10, 2026</div>
+                <div class="entry-card">
+                    <span class="tag feature">Feature</span>
+                    <h2>Events page</h2>
+                    <p>Create team events, RSVP with one tap, and see what's upcoming, happening right now, or already wrapped — complete with attendee lists and live status.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="2026-06-09-comments">
+                <div class="entry-date">Jun 9, 2026</div>
+                <div class="entry-card">
+                    <span class="tag feature">Feature</span>
+                    <h2>Comments, plus events and gift funds on the dashboard</h2>
+                    <p>Every wall post now supports threaded comments. The dashboard gained an Upcoming Events widget and a Gift Fund widget with inline contributions.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="2026-05-17-time-off">
+                <div class="entry-date">May 17, 2026</div>
+                <div class="entry-card">
+                    <span class="tag feature">Feature</span>
+                    <h2>Time-off overhaul</h2>
+                    <p>Working-day-aware request calculations, public holidays for 250+ countries with regional support, per-person work schedules and country overrides, half-day requests, and annual leave allowances with live balances.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="2026-05-16-people">
+                <div class="entry-date">May 16, 2026</div>
+                <div class="entry-card">
+                    <span class="tag improvement">Improvement</span>
+                    <h2>People section, rebuilt</h2>
+                    <p>A single searchable directory with multi-select filters for department, team, role, and status — plus bulk actions and inline invitation management.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="2026-04-18-design">
+                <div class="entry-date">Apr 18, 2026</div>
+                <div class="entry-card">
+                    <span class="tag design">Design</span>
+                    <h2>New design system</h2>
+                    <p>A cleaner, calmer TeamTango: refreshed typography, softer color palette, redesigned dashboard, stat cards with inline charts, and a reworked reactions row.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="2025-12-14-post-editing">
+                <div class="entry-date">Dec 14, 2025</div>
+                <div class="entry-card">
+                    <span class="tag feature">Feature</span>
+                    <h2>Post editing and celebrations</h2>
+                    <p>Edit or delete your posts after publishing, and a new Celebrate post type with birthday tracking for teammates.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="2025-10-16-invitations">
+                <div class="entry-date">Oct 16, 2025</div>
+                <div class="entry-card">
+                    <span class="tag feature">Feature</span>
+                    <h2>Workspace invitations and onboarding</h2>
+                    <p>Invite teammates by email and walk new workspaces through a guided setup: departments, teams, and people in minutes.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="2025-10-07-time-off-v1">
+                <div class="entry-date">Oct 7, 2025</div>
+                <div class="entry-card">
+                    <span class="tag feature">Feature</span>
+                    <h2>Time-off requests</h2>
+                    <p>The first version of time off: request leave, get it approved, and see your team's availability.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="2025-10-05-waitlist">
+                <div class="entry-date">Oct 5, 2025</div>
+                <div class="entry-card">
+                    <span class="tag improvement">Milestone</span>
+                    <h2>Waitlist opens</h2>
+                    <p>TeamTango development kicks off in earnest and the waitlist goes live at teamtango.io.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="cta-card" aria-label="Join the waitlist">
+            <h2>Watch us ship in real time</h2>
+            <p>Join the waitlist and get early access when we launch.</p>
+            <a class="button" href="/">Join the Waitlist</a>
+        </section>
+
+        <footer>
+            <p><a href="/">Home</a> &middot; <a href="/roadmap">Roadmap</a> &middot; <a href="/changelog">Changelog</a></p>
+            <p>&copy; 2026 TeamTango. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

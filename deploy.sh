@@ -34,3 +34,21 @@ ssh $SERVER "source ~/.nvm/nvm.sh && cd $DEPLOY_PATH && (pm2 restart teamtango-w
 
 echo "✅ Deployment complete!"
 echo "🌐 Application should be running at nexus.webarch.ro"
+
+# Notify search engines via IndexNow (Bing/Yandex family; feeds ChatGPT/Copilot indexes)
+INDEXNOW_KEY="fad54fff0271f9b6b6ba5bbc42f3caac"
+echo "📣 Pinging IndexNow..."
+curl -s -X POST "https://api.indexnow.org/indexnow" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d "{
+    \"host\": \"teamtango.io\",
+    \"key\": \"$INDEXNOW_KEY\",
+    \"keyLocation\": \"https://teamtango.io/$INDEXNOW_KEY.txt\",
+    \"urlList\": [
+      \"https://teamtango.io/\",
+      \"https://teamtango.io/roadmap\",
+      \"https://teamtango.io/changelog\",
+      \"https://teamtango.io/vs/workvivo\",
+      \"https://teamtango.io/vs/slack\"
+    ]
+  }" -o /dev/null -w "IndexNow HTTP %{http_code}\n"

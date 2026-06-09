@@ -52,6 +52,9 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/9d720d09b4.js" crossorigin="anonymous" defer></script>
 
+    <!-- Privacy-friendly analytics (umami, self-hosted) -->
+    <script defer src="https://analytics.webarch.ro/script.js" data-website-id="ed2d1e4b-2423-433c-a028-f5c64a91d345"></script>
+
     <!-- Structured Data / Schema.org -->
     <script type="application/ld+json">
     {
@@ -83,6 +86,7 @@
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD",
+            "availability": "https://schema.org/PreOrder",
             "description": "Free early access for waitlist members"
           },
           "publisher": { "@id": "https://teamtango.io/#organization" },
@@ -137,6 +141,30 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "TeamTango is currently in development and launching soon. Join the waitlist at teamtango.io with your email address to get early access and launch updates. Waitlist members get early access first; pricing will be announced at launch."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much will TeamTango cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pricing will be announced at launch and is designed for small and mid-size teams — simple and self-serve, not enterprise quotes. Waitlist members get early access first and a say in shaping the pricing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is our team's data private and secure?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Each workspace's data is isolated, all traffic is encrypted over HTTPS, and TeamTango is hosted on servers in the European Union. Your team's posts, kudos, and time-off records are yours — we don't sell data or run ads."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I follow TeamTango's development?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The public roadmap at teamtango.io/roadmap shows what's shipped, in progress, and planned. The changelog at teamtango.io/changelog lists dated releases and has an RSS feed. Waitlist members also receive launch updates by email."
               }
             }
           ]
@@ -783,6 +811,10 @@
             line-height: 1.65;
         }
 
+        .faq-item p a {
+            color: var(--orange-500);
+        }
+
         /* ============ Bottom CTA ============ */
 
         .cta-card {
@@ -1166,6 +1198,27 @@
                     </summary>
                     <p>TeamTango is currently in development and launching soon. Join the waitlist with your email address to get early access and launch updates. Waitlist members get early access first; pricing will be announced at launch.</p>
                 </details>
+                <details class="faq-item">
+                    <summary>
+                        <h3>How much will TeamTango cost?</h3>
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </summary>
+                    <p>Pricing will be announced at launch and is designed for small and mid-size teams — simple and self-serve, not enterprise quotes. Waitlist members get early access first and a say in shaping the pricing.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>
+                        <h3>Is our team's data private and secure?</h3>
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </summary>
+                    <p>Yes. Each workspace's data is isolated, all traffic is encrypted over HTTPS, and TeamTango is hosted on servers in the European Union. Your team's posts, kudos, and time-off records are yours — we don't sell data or run ads.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>
+                        <h3>How can I follow TeamTango's development?</h3>
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </summary>
+                    <p>The public <a href="/roadmap">roadmap</a> shows what's shipped, in progress, and planned. The <a href="/changelog">changelog</a> lists dated releases and has an <a href="/feed.xml">RSS feed</a>. Waitlist members also receive launch updates by email.</p>
+                </details>
             </div>
         </section>
 
@@ -1179,7 +1232,7 @@
 
         <footer>
             <p class="about-line">TeamTango is a team engagement platform for remote, hybrid, and in-office teams: team wall, kudos and recognition, automated celebrations, PTO management, and engagement insights.</p>
-            <p><a href="/roadmap">Roadmap</a></p>
+            <p><a href="/roadmap">Roadmap</a> &middot; <a href="/changelog">Changelog</a> &middot; <a href="/vs/workvivo">vs Workvivo</a> &middot; <a href="/vs/slack">vs Slack</a></p>
             <p>&copy; 2026 TeamTango. All rights reserved.</p>
         </footer>
     </div>

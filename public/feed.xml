@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>TeamTango Changelog</title>
+  <link>https://teamtango.io/changelog</link>
+  <description>What we've shipped in TeamTango, the team engagement platform.</description>
+  <language>en-us</language>
+  <lastBuildDate>Wed, 10 Jun 2026 12:00:00 +0000</lastBuildDate>
+  <atom:link href="https://teamtango.io/feed.xml" rel="self" type="application/rss+xml"/>
+
+  <item>
+    <title>Team Pulse runs on live data</title>
+    <link>https://teamtango.io/changelog#2026-06-10-team-pulse</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-10-team-pulse</guid>
+    <pubDate>Wed, 10 Jun 2026 10:00:00 +0000</pubDate>
+    <description>The dashboard stat cards — kudos sent, posts created, engagements, participation rate — now compute from your team's real activity, with week-over-week trends.</description>
+  </item>
+  <item>
+    <title>Events page</title>
+    <link>https://teamtango.io/changelog#2026-06-10-events</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-10-events</guid>
+    <pubDate>Wed, 10 Jun 2026 09:00:00 +0000</pubDate>
+    <description>Create team events, RSVP with one tap, and see what's upcoming, happening right now, or already wrapped — complete with attendee lists and live status.</description>
+  </item>
+  <item>
+    <title>Comments, plus events and gift funds on the dashboard</title>
+    <link>https://teamtango.io/changelog#2026-06-09-comments</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-09-comments</guid>
+    <pubDate>Tue, 09 Jun 2026 10:00:00 +0000</pubDate>
+    <description>Every wall post now supports threaded comments. The dashboard gained an Upcoming Events widget and a Gift Fund widget with inline contributions.</description>
+  </item>
+  <item>
+    <title>Time-off overhaul</title>
+    <link>https://teamtango.io/changelog#2026-05-17-time-off</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-05-17-time-off</guid>
+    <pubDate>Sun, 17 May 2026 10:00:00 +0000</pubDate>
+    <description>Working-day-aware request calculations, public holidays for 250+ countries with regional support, per-person work schedules and country overrides, half-day requests, and annual leave allowances with live balances.</description>
+  </item>
+  <item>
+    <title>People section, rebuilt</title>
+    <link>https://teamtango.io/changelog#2026-05-16-people</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-05-16-people</guid>
+    <pubDate>Sat, 16 May 2026 10:00:00 +0000</pubDate>
+    <description>A single searchable directory with multi-select filters for department, team, role, and status — plus bulk actions and inline invitation management.</description>
+  </item>
+  <item>
+    <title>New design system</title>
+    <link>https://teamtango.io/changelog#2026-04-18-design</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-04-18-design</guid>
+    <pubDate>Sat, 18 Apr 2026 10:00:00 +0000</pubDate>
+    <description>A cleaner, calmer TeamTango: refreshed typography, softer color palette, redesigned dashboard, stat cards with inline charts, and a reworked reactions row.</description>
+  </item>
+  <item>
+    <title>Post editing and celebrations</title>
+    <link>https://teamtango.io/changelog#2025-12-14-post-editing</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2025-12-14-post-editing</guid>
+    <pubDate>Sun, 14 Dec 2025 10:00:00 +0000</pubDate>
+    <description>Edit or delete your posts after publishing, and a new Celebrate post type with birthday tracking for teammates.</description>
+  </item>
+  <item>
+    <title>Workspace invitations and onboarding</title>
+    <link>https://teamtango.io/changelog#2025-10-16-invitations</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2025-10-16-invitations</guid>
+    <pubDate>Thu, 16 Oct 2025 10:00:00 +0000</pubDate>
+    <description>Invite teammates by email and walk new workspaces through a guided setup: departments, teams, and people in minutes.</description>
+  </item>
+  <item>
+    <title>Time-off requests</title>
+    <link>https://teamtango.io/changelog#2025-10-07-time-off-v1</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2025-10-07-time-off-v1</guid>
+    <pubDate>Tue, 07 Oct 2025 10:00:00 +0000</pubDate>
+    <description>The first version of time off: request leave, get it approved, and see your team's availability.</description>
+  </item>
+  <item>
+    <title>Waitlist opens</title>
+    <link>https://teamtango.io/changelog#2025-10-05-waitlist</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2025-10-05-waitlist</guid>
+    <pubDate>Sun, 05 Oct 2025 10:00:00 +0000</pubDate>
+    <description>TeamTango development kicks off in earnest and the waitlist goes live at teamtango.io.</description>
+  </item>
+</channel>
+</rss>
