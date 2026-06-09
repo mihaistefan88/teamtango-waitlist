@@ -102,9 +102,18 @@ Rsyncs to `root@nexus.webarch.ro:/var/www/teamtango-waitlist` (excludes
 `emails.json`, `node_modules`, `.git`) and restarts via pm2. Served at
 https://teamtango.io behind nginx.
 
+## Bot protection (added 2026-06-10)
+
+- Honeypot `website` field — hidden off-screen; if filled, the server returns
+  fake success and stores nothing
+- `express-rate-limit`: 5 POSTs/hour per IP (`trust proxy 1` for nginx)
+- Duplicate check normalizes Gmail addresses (dots and `+suffix` stripped) —
+  the dotted-Gmail trick produced ~25 bot "signups" in 2025–2026
+- History: 38 of the first 40 signups were bots; purged 2026-06-10
+  (backup: `emails.json.bak-20260610` on the server)
+
 ## Remaining production TODOs
 
 1. Protect `GET /api/waitlist/all` (and `/count`) with auth
-2. Add rate limiting on `POST /api/waitlist`
-3. Consider a proper database if volume grows
-4. Email notifications on signup
+2. Consider a proper database if volume grows
+3. Email notifications on signup
