@@ -299,6 +299,16 @@
             max-width: 28rem;
         }
 
+        /* Honeypot — off-screen, not display:none (some bots skip hidden fields) */
+        .hp-field {
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+        }
+
         .form-row {
             display: flex;
             gap: 0.5rem;
@@ -911,6 +921,11 @@
 
             <!-- Waitlist Form -->
             <form id="waitlistForm" class="waitlist-form" aria-label="Waitlist signup form">
+                <!-- Honeypot — invisible to humans, bots auto-fill it -->
+                <div class="hp-field" aria-hidden="true">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
                 <div class="form-row">
                     <input
                         type="email"
@@ -1194,7 +1209,7 @@
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ email }),
+                    body: JSON.stringify({ email, website: document.getElementById('website').value }),
                 });
 
                 const data = await response.json();

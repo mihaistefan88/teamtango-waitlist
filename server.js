@@ -1,17 +1,30 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const rateLimit = require('express-rate-limit');
 const fs = require('fs').promises;
 const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Behind nginx — trust the first proxy hop so req.ip is the real client
+// (required for per-IP rate limiting; otherwise every request appears as 127.0.0.1)
+app.set('trust proxy', 1);
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
 // Only the public/ dir is web-served — keeps emails.json and server source private
 app.use(express.static(path.join(__dirname, 'public')));
+
+const waitlistLimiter = rateLimit({
+    windowMs: 60 * 60 * 1000, // 1 hour
+    max: 5,
+    standardHeaders: true,
+    legacyHeaders: false,
+    message: { error: 'Too many requests. Please try again later.' }
+});
 
 // Path to store emails
 const EMAILS_FILE = path.join(__dirname, 'emails.json');
@@ -46,10 +59,31 @@ async function writeEmails(emails) {
     }
 }
 
+// Normalize for duplicate detection: lowercase; for Gmail, dots and +suffixes
+// are ignored by Google, so a.b+x@gmail.com === ab@gmail.com (the dotted-Gmail
+// trick is how the 2025-2026 bot signups bypassed dedup)
+function normalizeEmail(email) {
+    let [local, domain] = email.toLowerCase().split('@');
+    if (domain === 'googlemail.com') domain = 'gmail.com';
+    if (domain === 'gmail.com') {
+        local = local.split('+')[0].replace(/\./g, '');
+    }
+    return `${local}@${domain}`;
+}
+
 // API endpoint to submit email
-app.post('/api/waitlist', async (req, res) => {
+app.post('/api/waitlist', waitlistLimiter, async (req, res) => {
     try {
-        const { email } = req.body;
+        const { email, website } = req.body;
+
+        // Honeypot: the "website" field is invisible to humans; bots fill it.
+        // Reply with fake success so bots don't learn they were filtered.
+        if (website) {
+            return res.status(201).json({
+                message: 'Successfully added to waitlist',
+                success: true
+            });
+        }
 
         // Validate email
         if (!email) {
@@ -64,8 +98,9 @@ app.post('/api/waitlist', async (req, res) => {
         // Read existing emails
         const emails = await readEmails();
 
-        // Check if email already exists
-        const existingEntry = emails.find(entry => entry.email === email);
+        // Check if email already exists (normalized comparison)
+        const normalized = normalizeEmail(email);
+        const existingEntry = emails.find(entry => normalizeEmail(entry.email) === normalized);
         if (existingEntry) {
             return res.status(200).json({
                 message: 'Email already registered',

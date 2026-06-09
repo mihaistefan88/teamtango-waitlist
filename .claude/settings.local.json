@@ -1,5 +1,9 @@
 {
   "permissions": {
+    "allow": [
+      "Read(//home/mihai/projects/valet/teamtango/frontend/**)",
+      "Read(//home/mihai/projects/valet/teamtango/frontend/src/**)"
+    ],
     "additionalDirectories": [
       "/Users/mihai/projects/valet/teamtango"
     ]
