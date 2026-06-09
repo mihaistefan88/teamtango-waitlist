@@ -1,15 +1,49 @@
 # TeamTango Waitlist
 
-A landing page for TeamTango waitlist with email collection functionality.
+Marketing landing page for TeamTango (https://teamtango.io) with email waitlist collection.
 
-## Features
+## Structure
 
-- Modern, responsive design matching TeamTango brand
-- Email collection with validation
-- Node.js backend with Express
-- Emails stored in JSON file
-- Duplicate email prevention
-- Social proof elements
+```
+teamtango-waitlist/
+├── server.js            # Express 5 server — API + static serving of public/
+├── public/              # Everything web-served lives here (and ONLY here)
+│   ├── index.html       # The landing page (feed-style layout, app design system)
+│   ├── robots.txt       # All crawlers + AI bots explicitly allowed
+│   ├── sitemap.xml
+│   ├── llms.txt         # AI answer-engine summary of the product
+│   ├── og-image.png     # 1200x630 social card (generated from logo)
+│   ├── favicon-*.png, apple-touch-icon.png, favicon.ico
+│   └── teamtango-logo.png
+├── teamtango-logo.png   # Source asset (400x400) for regenerating icons
+├── emails.json          # Collected emails — NOT web-accessible (outside public/)
+└── deploy.sh            # rsync to nexus.webarch.ro + pm2 restart
+```
+
+`emails.json`, `server.js`, and `package.json` are intentionally outside the
+static root — only `public/` is served.
+
+## Design
+
+The page mirrors the main app's design system (see
+`teamtango/frontend/src/assets/css/main.css`): Inter, custom slate palette,
+orange-400 `#fba468` primary, 20px radii, solid white shadowless cards on the
+`#f8fcff → #edf3fa` gradient. Layout is feed-style storytelling — features are
+presented as Team Wall post cards. Font Awesome icons only, no emoji glyphs.
+
+## SEO / AI search
+
+- Canonical domain is **https://teamtango.io** (NOT teamtango.com — that's someone else's)
+- JSON-LD `@graph`: Organization, WebSite, SoftwareApplication, FAQPage (5 Q&As, mirrored by the visible FAQ section)
+- `robots.txt` explicitly allows AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, …) and disallows `/api/`
+- `llms.txt` gives answer engines a structured product summary
+- OG/Twitter cards point at the generated `og-image.png`
+
+Regenerate icons/OG image from the source logo with ImageMagick:
+
+```bash
+magick teamtango-logo.png -resize 32x32 public/favicon-32x32.png   # etc.
+```
 
 ## Setup
 
@@ -25,8 +59,10 @@ npm start
 
 3. Open your browser to:
 ```
-http://localhost:3000
+http://localhost:3001
 ```
+
+(Default port is 3001 — set `PORT` to override. The main TeamTango dev backend occupies 3000.)
 
 ## API Endpoints
 
@@ -56,13 +92,19 @@ Emails are stored in `emails.json` with the following structure:
 ]
 ```
 
-## Production Deployment
+## Deployment
 
-For production, consider:
-1. Using a proper database (PostgreSQL, MongoDB, etc.)
-2. Adding authentication for admin endpoints
-3. Setting up proper environment variables
-4. Adding rate limiting
-5. Implementing email notifications
-6. Adding HTTPS
-7. Setting up proper logging
+```bash
+./deploy.sh
+```
+
+Rsyncs to `root@nexus.webarch.ro:/var/www/teamtango-waitlist` (excludes
+`emails.json`, `node_modules`, `.git`) and restarts via pm2. Served at
+https://teamtango.io behind nginx.
+
+## Remaining production TODOs
+
+1. Protect `GET /api/waitlist/all` (and `/count`) with auth
+2. Add rate limiting on `POST /api/waitlist`
+3. Consider a proper database if volume grows
+4. Email notifications on signup

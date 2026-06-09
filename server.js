@@ -10,7 +10,8 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(__dirname));
+// Only the public/ dir is web-served — keeps emails.json and server source private
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Path to store emails
 const EMAILS_FILE = path.join(__dirname, 'emails.json');

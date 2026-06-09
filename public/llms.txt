@@ -1,0 +1,30 @@
+# TeamTango
+
+> TeamTango is an all-in-one team engagement and culture platform for remote, hybrid, and in-office teams: a team wall for highlights and kudos, automated birthday and work anniversary celebrations, PTO and time-off management with approval workflows, engagement insights, and visual org charts. Currently in development — a public waitlist is open at https://teamtango.io.
+
+## What TeamTango does
+
+- **Team Wall & Smart Posts**: a social feed where teams share highlights, kudos, and challenges. Posts are auto-categorized by AI and support @mentions.
+- **Recognition & Reactions**: peer-to-peer kudos with @mentions and emoji reactions (heart, thumbs-up, funny, comments) to make appreciation visible and persistent.
+- **Automated Celebrations**: birthdays and work anniversaries are detected automatically and announced to the team, so milestones are never missed.
+- **PTO Management**: time-off requests with approval workflows, leave balances per leave type, half-day support, public-holiday awareness per country/region, and a team availability calendar.
+- **Team Insights**: engagement analytics — kudos sent, posts created, engagements, participation rate — with week-over-week trends.
+- **Org Management**: departments, teams, and a searchable people directory.
+
+## Who it is for
+
+Remote, hybrid, and in-office teams that care about culture, from startups to mid-size companies. Team leads keep recognition visible; HR / people-ops manage time off and read engagement signals; everyone uses the wall to stay connected.
+
+## How it compares
+
+TeamTango complements chat tools (Slack, Microsoft Teams) rather than replacing them. Chat is ephemeral — recognition scrolls away within hours. TeamTango is a persistent culture layer where kudos, celebrations, and milestones stay visible, and where time off and engagement are managed properly.
+
+## Status and access
+
+- Status: in development, launching soon
+- Access: join the waitlist at https://teamtango.io (email only)
+- Pricing: announced at launch; waitlist members get early access first
+
+## Links
+
+- [Waitlist and product overview](https://teamtango.io/): the landing page, including a feature FAQ
