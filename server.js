@@ -16,7 +16,8 @@ app.set('trust proxy', 1);
 app.use(cors());
 app.use(bodyParser.json());
 // Only the public/ dir is web-served — keeps emails.json and server source private
-app.use(express.static(path.join(__dirname, 'public')));
+// extensions: clean URLs (/roadmap -> roadmap.html)
+app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
 
 const waitlistLimiter = rateLimit({
     windowMs: 60 * 60 * 1000, // 1 hour

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Roadmap | TeamTango - What's Shipped, In Progress, and Planned</title>
+    <meta name="title" content="Roadmap | TeamTango - What's Shipped, In Progress, and Planned">
+    <meta name="description" content="The TeamTango product roadmap: what's already built (team wall, kudos, events, gift funds, time-off management), what's in progress, and what's planned next. No dates, just honest status.">
+    <meta name="author" content="TeamTango">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f8fcff">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teamtango.io/roadmap">
+    <meta property="og:site_name" content="TeamTango">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="TeamTango Roadmap - What's Shipped, In Progress, and Planned">
+    <meta property="og:description" content="What's already built, what's in progress, and what's coming next in TeamTango, the team engagement platform.">
+    <meta property="og:image" content="https://teamtango.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="TeamTango logo — Where Teams Connect, Celebrate, and Thrive">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://teamtango.io/roadmap">
+    <meta property="twitter:title" content="TeamTango Roadmap - What's Shipped, In Progress, and Planned">
+    <meta property="twitter:description" content="What's already built, what's in progress, and what's coming next in TeamTango.">
+    <meta property="twitter:image" content="https://teamtango.io/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <link rel="canonical" href="https://teamtango.io/roadmap">
+
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link rel="dns-prefetch" href="https://fonts.bunny.net">
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9d720d09b4.js" crossorigin="anonymous" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://teamtango.io/roadmap#webpage",
+          "url": "https://teamtango.io/roadmap",
+          "name": "TeamTango Roadmap",
+          "description": "What's shipped, in progress, and planned in TeamTango, the team engagement platform.",
+          "isPartOf": { "@id": "https://teamtango.io/#website" },
+          "about": { "@id": "https://teamtango.io/#software" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "TeamTango", "item": "https://teamtango.io/" },
+            { "@type": "ListItem", "position": 2, "name": "Roadmap", "item": "https://teamtango.io/roadmap" }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        /* Design tokens mirror the TeamTango app — see index.html for the source mapping */
+        :root {
+            --orange-50:  #fff7ed;
+            --orange-100: #ffedd5;
+            --orange-200: #fed7aa;
+            --orange-400: #fba468;
+            --orange-500: #f97316;
+            --orange-700: #c2410c;
+            --slate-100: #f8fafc;
+            --slate-200: #eef2f6;
+            --slate-300: #d3d9e2;
+            --slate-400: #a7b1be;
+            --slate-500: #7b8798;
+            --slate-600: #5b6273;
+            --slate-700: #474d5d;
+            --slate-800: #272e40;
+            --slate-900: #0f172b;
+            --green-100: #e3f4e9;
+            --green-500: #44b469;
+            --green-700: #2f7d49;
+            --magenta-100: #f7e3ea;
+            --magenta-500: #af1846;
+            --radius: 1.25rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scrollbar-width: thin;
+            scrollbar-color: var(--slate-300) transparent;
+        }
+
+        ::-webkit-scrollbar { width: 10px; height: 10px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb {
+            background: var(--slate-300);
+            border-radius: 20px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: var(--slate-400); }
+
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+            background-image: linear-gradient(to bottom, #f8fcff 0%, #edf3fa 100%);
+            background-attachment: fixed;
+            color: var(--slate-900);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .page {
+            max-width: 46rem;
+            margin: 0 auto;
+            padding: 2.5rem 1.25rem 2rem;
+        }
+
+        /* ============ Top nav ============ */
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3.5rem;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+
+        .nav-logo span {
+            margin-left: 0.625rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--slate-800);
+        }
+
+        .button {
+            padding: 0.625rem 1.25rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            font-family: inherit;
+            white-space: nowrap;
+            color: white;
+            background-color: var(--orange-400);
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 200ms ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: var(--orange-500);
+        }
+
+        /* ============ Header ============ */
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.875rem;
+        }
+
+        .header p {
+            font-size: 1.0625rem;
+            color: var(--slate-600);
+            line-height: 1.6;
+            max-width: 34rem;
+            margin: 0 auto;
+        }
+
+        /* ============ Sections ============ */
+
+        .section {
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.5s ease-out both;
+        }
+
+        .section:nth-of-type(2) { animation-delay: 0.08s; }
+        .section:nth-of-type(3) { animation-delay: 0.16s; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .status-pill.shipped { background-color: var(--green-100); color: var(--green-700); }
+        .status-pill.progress { background-color: var(--orange-100); color: var(--orange-700); }
+        .status-pill.planned { background-color: var(--slate-200); color: var(--slate-600); }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 640px) {
+            .cards { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.875rem; }
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+            transition: all 200ms ease;
+        }
+
+        .card:hover {
+            border-color: var(--slate-300);
+            transform: translateY(-2px);
+        }
+
+        .card-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            min-width: 2.5rem;
+            border-radius: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .card-icon.orange { background-color: var(--orange-50); color: var(--orange-500); }
+        .card-icon.green { background-color: var(--green-100); color: var(--green-500); }
+        .card-icon.magenta { background-color: var(--magenta-100); color: var(--magenta-500); }
+        .card-icon.slate { background-color: var(--slate-100); color: var(--slate-500); }
+
+        .card h3 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--slate-900);
+            line-height: 1.35;
+            margin-bottom: 0.25rem;
+        }
+
+        .card p {
+            font-size: 0.8125rem;
+            color: var(--slate-500);
+            line-height: 1.55;
+        }
+
+        /* Planned cards are slightly muted */
+        .section.planned-section .card { opacity: 0.85; }
+
+        /* ============ CTA + footer ============ */
+
+        .cta-card {
+            background-color: white;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius);
+            padding: 2.25rem 2rem;
+            text-align: center;
+            margin-top: 3.5rem;
+        }
+
+        .cta-card h2 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-card p {
+            font-size: 0.9375rem;
+            color: var(--slate-500);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-card .button {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--slate-400);
+            margin-top: 3rem;
+            line-height: 1.8;
+        }
+
+        footer a {
+            color: var(--slate-500);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="nav-logo" href="/">
+                <img src="/teamtango-logo.png" alt="TeamTango logo" width="36" height="36">
+                <span>TeamTango</span>
+            </a>
+            <a class="button" href="/">Join Waitlist</a>
+        </nav>
+
+        <header class="header">
+            <h1>Roadmap</h1>
+            <p>What's already built, what we're working on, and what's next. No dates, no promises we can't keep — this page is updated as things ship.</p>
+        </header>
+
+        <!-- Shipped -->
+        <section class="section" aria-labelledby="shipped-heading">
+            <div class="section-header">
+                <h2 id="shipped-heading">Shipped</h2>
+                <span class="status-pill shipped"><i class="fa-solid fa-check" aria-hidden="true"></i> Built and working</span>
+            </div>
+            <div class="cards">
+                <article class="card">
+                    <div class="card-icon orange" aria-hidden="true"><i class="fa-solid fa-sparkles"></i></div>
+                    <div>
+                        <h3>Team Wall</h3>
+                        <p>A social feed for highlights, kudos, challenges, and celebrations, with reactions and comments</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon green" aria-hidden="true"><i class="fa-solid fa-hands-clapping"></i></div>
+                    <div>
+                        <h3>Kudos &amp; Recognition</h3>
+                        <p>Peer-to-peer appreciation with @mentions and emoji reactions that stay visible</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon magenta" aria-hidden="true"><i class="fa-solid fa-calendar-star"></i></div>
+                    <div>
+                        <h3>Events</h3>
+                        <p>Create team events, RSVP, see who's going, and follow what's happening now</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon green" aria-hidden="true"><i class="fa-solid fa-gift"></i></div>
+                    <div>
+                        <h3>Gift Funds</h3>
+                        <p>Pool contributions for birthdays, farewells, and milestones — right from the dashboard</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon orange" aria-hidden="true"><i class="fa-solid fa-umbrella-beach"></i></div>
+                    <div>
+                        <h3>Time Off &amp; Holiday Planner</h3>
+                        <p>Requests and approvals, half-days, per-person allowances, public holidays for 250+ countries, and a team calendar</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon magenta" aria-hidden="true"><i class="fa-solid fa-users"></i></div>
+                    <div>
+                        <h3>People &amp; Org Management</h3>
+                        <p>Departments, teams, roles, invitations, and a searchable directory with powerful filters</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon slate" aria-hidden="true"><i class="fa-solid fa-building-user"></i></div>
+                    <div>
+                        <h3>Workspaces</h3>
+                        <p>Multi-workspace membership, workspace settings, Google sign-in, and guided onboarding</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon orange" aria-hidden="true"><i class="fa-solid fa-cake-candles"></i></div>
+                    <div>
+                        <h3>Celebrations</h3>
+                        <p>Birthday tracking with celebration posts so milestones never slip by unnoticed</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- In progress -->
+        <section class="section" aria-labelledby="progress-heading">
+            <div class="section-header">
+                <h2 id="progress-heading">In progress</h2>
+                <span class="status-pill progress"><i class="fa-solid fa-hammer" aria-hidden="true"></i> Being built now</span>
+            </div>
+            <div class="cards">
+                <article class="card">
+                    <div class="card-icon orange" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <div>
+                        <h3>AI Smart Post Categorization</h3>
+                        <p>Write naturally — TeamTango detects whether it's a highlight, kudos, or challenge</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon green" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></div>
+                    <div>
+                        <h3>Team Insights &amp; Analytics</h3>
+                        <p>Engagement metrics, participation rates, and top contributors on a live pulse dashboard</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon magenta" aria-hidden="true"><i class="fa-solid fa-bolt"></i></div>
+                    <div>
+                        <h3>Real-Time Feed</h3>
+                        <p>New posts and reactions appear instantly for everyone — no refresh needed</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon orange" aria-hidden="true"><i class="fa-solid fa-gear"></i></div>
+                    <div>
+                        <h3>Gift Fund Management</h3>
+                        <p>Create, run, and close gift funds without leaving the app</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Planned -->
+        <section class="section planned-section" aria-labelledby="planned-heading">
+            <div class="section-header">
+                <h2 id="planned-heading">Planned</h2>
+                <span class="status-pill planned"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> On the list</span>
+            </div>
+            <div class="cards">
+                <article class="card">
+                    <div class="card-icon slate" aria-hidden="true"><i class="fa-solid fa-robot"></i></div>
+                    <div>
+                        <h3>Automations</h3>
+                        <p>Recurring check-ins, scheduled celebrations, and rule-based workflows</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon slate" aria-hidden="true"><i class="fa-solid fa-plug"></i></div>
+                    <div>
+                        <h3>Integrations</h3>
+                        <p>Connect the tools your team already lives in, starting with chat and calendar</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon slate" aria-hidden="true"><i class="fa-solid fa-language"></i></div>
+                    <div>
+                        <h3>Multi-Language Support</h3>
+                        <p>TeamTango in your team's language</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-icon slate" aria-hidden="true"><i class="fa-solid fa-circle-question"></i></div>
+                    <div>
+                        <h3>Help Center</h3>
+                        <p>Guides, best practices, and answers — for admins and teammates alike</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta-card" aria-label="Join the waitlist">
+            <h2>Want to shape what we build next?</h2>
+            <p>Join the waitlist — early users get a direct line to the team.</p>
+            <a class="button" href="/">Join the Waitlist</a>
+        </section>
+
+        <footer>
+            <p><a href="/">Home</a> &middot; <a href="/roadmap">Roadmap</a></p>
+            <p>&copy; 2026 TeamTango. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

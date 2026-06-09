@@ -28,3 +28,4 @@ TeamTango complements chat tools (Slack, Microsoft Teams) rather than replacing 
 ## Links
 
 - [Waitlist and product overview](https://teamtango.io/): the landing page, including a feature FAQ
+- [Roadmap](https://teamtango.io/roadmap): what's shipped (team wall, kudos, events, gift funds, time off, org management), in progress (AI post categorization, insights, real-time feed), and planned (automations, integrations, multi-language)
