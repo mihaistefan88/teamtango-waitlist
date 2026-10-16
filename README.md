@@ -99,8 +99,16 @@ Emails are stored in `emails.json` with the following structure:
 ```
 
 Rsyncs to `root@nexus.webarch.ro:/var/www/teamtango-waitlist` (excludes
-`emails.json`, `node_modules`, `.git`) and restarts via pm2. Served at
-https://teamtango.io behind nginx.
+`emails.json`, `node_modules`, `.git`, `marketing-assets`) and restarts the
+systemd unit `teamtango-waitlist.service`, the only process manager for the app.
+Don't also run it under pm2: the two fight over port 3001 and the loser
+crash-loops silently. Served at https://teamtango.io behind nginx.
+
+## Product screenshots
+
+`public/img/*.webp` (hero + "Inside the app") and `public/og-image.png` are
+built from a seeded local copy of the app. Sources, raw screenshots and the
+seed/shoot/compose scripts live in `marketing-assets/` (not deployed).
 
 ## Bot protection (added 2026-06-10)
 
