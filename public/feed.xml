@@ -5,9 +5,16 @@
   <link>https://teamtango.io/changelog</link>
   <description>What we've shipped in TeamTango, the team engagement platform.</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 01 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 16 Oct 2026 12:00:00 +0000</lastBuildDate>
   <atom:link href="https://teamtango.io/feed.xml" rel="self" type="application/rss+xml"/>
 
+  <item>
+    <title>Fixes across time off, Insights and profiles</title>
+    <link>https://teamtango.io/changelog#2026-10-16-fixes-time-off-insights-profiles</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-10-16-fixes-time-off-insights-profiles</guid>
+    <pubDate>Fri, 16 Oct 2026 10:00:00 +0000</pubDate>
+    <description>Time off that spans two months now shows in both on the team calendar, and time-off dates load reliably on the calendar and request lists. Insights ranks Top Contributors by the same engagement score shown next to each person, and "Challenge" is now the one name for challenge posts everywhere. Profiles show department and location separately, each with its own icon. On phones, the post composer's toolbar fits the screen and event attendee avatars no longer cut off each other's initials.</description>
+  </item>
   <item>
     <title>Gift funds stay a surprise</title>
     <link>https://teamtango.io/changelog#2026-08-16-gift-fund-surprise</link>
