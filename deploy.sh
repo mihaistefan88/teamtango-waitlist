@@ -22,6 +22,7 @@ rsync -avz --delete \
   --exclude '.claude' \
   --exclude 'emails.json' \
   --exclude 'deploy.sh' \
+  --exclude 'marketing-assets' \
   ./ $SERVER:$DEPLOY_PATH/
 
 # Install dependencies and restart on server
