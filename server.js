@@ -165,17 +165,6 @@ app.get('/api/waitlist/count', async (req, res) => {
     }
 });
 
-// API endpoint to get all emails (optional - for admin, should be protected)
-app.get('/api/waitlist/all', async (req, res) => {
-    try {
-        const emails = await readEmails();
-        res.json({ emails });
-    } catch (error) {
-        console.error('Error getting emails:', error);
-        res.status(500).json({ error: 'Internal server error' });
-    }
-});
-
 // Custom 404 (registered after static + API routes)
 app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));

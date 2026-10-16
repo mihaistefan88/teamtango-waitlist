@@ -75,9 +75,9 @@ Submit an email to the waitlist
 Get the total number of waitlist signups
 - Returns: `{ "count": 123 }`
 
-### GET /api/waitlist/all
-Get all waitlist emails (should be protected in production)
-- Returns: `{ "emails": [...] }`
+There is deliberately no endpoint that lists emails. `GET /api/waitlist/all`
+existed and served every signup publicly until 2026-10-16; read `emails.json`
+on the server instead.
 
 ## Storage
 
@@ -114,6 +114,5 @@ https://teamtango.io behind nginx.
 
 ## Remaining production TODOs
 
-1. Protect `GET /api/waitlist/all` (and `/count`) with auth
-2. Consider a proper database if volume grows
-3. Email notifications on signup
+1. Consider a proper database if volume grows
+2. Email notifications on signup
