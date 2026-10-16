@@ -1,15 +1,18 @@
 # TeamTango
 
-> TeamTango is an all-in-one team engagement and culture platform for remote, hybrid, and in-office teams: a team wall for highlights and kudos, automated birthday and work anniversary celebrations, PTO and time-off management with approval workflows, engagement insights, and visual org charts. Currently in development — a public waitlist is open at https://teamtango.io.
+> TeamTango is an all-in-one team engagement and culture platform for remote, hybrid, and in-office teams: a team wall for highlights and kudos, automated birthday and work anniversary celebrations, PTO and time-off management with approvals, events, gift funds, anonymous team pulse check-ins, engagement insights, and a people directory. Currently in development — a public waitlist is open at https://teamtango.io.
 
 ## What TeamTango does
 
 - **Team Wall & Smart Posts**: a social feed where teams share highlights, kudos, and challenges. Posts are auto-categorized by AI and support @mentions.
-- **Recognition & Reactions**: peer-to-peer kudos with @mentions and emoji reactions (heart, thumbs-up, funny, comments) to make appreciation visible and persistent.
-- **Automated Celebrations**: birthdays and work anniversaries are detected automatically and announced to the team, so milestones are never missed.
-- **PTO Management**: time-off requests with approval workflows, leave balances per leave type, half-day support, public-holiday awareness per country/region, and a team availability calendar.
+- **Recognition & Reactions**: peer-to-peer kudos with @mentions and emoji reactions (love, like, dislike, sad, funny) and threaded comments to make appreciation visible and persistent.
+- **Automated Celebrations**: once an admin switches them on, birthdays, work anniversaries, and new joiners are announced to the team automatically, and a weekly digest email recaps the wall.
+- **PTO Management**: time-off requests with manager approval, leave balances per leave type, half-day support, public-holiday awareness per country/region, and a team availability calendar.
 - **Team Insights**: engagement analytics — kudos sent, posts created, engagements, participation rate — with week-over-week trends.
 - **Org Management**: departments, teams, and a searchable people directory.
+- **Events & Gift Funds**: team events with RSVPs, and gift funds for birthdays and farewells, kept hidden from the person they're for.
+- **Team Pulse**: rotating anonymous check-in questions; no breakdown is shown until at least three people have answered.
+- **Notifications & Integrations**: live in-app notifications, email for important events, and posts into Slack, Microsoft Teams, or Mattermost channels, plus signed webhooks for anything else.
 
 ## Who it is for
 
@@ -28,7 +31,7 @@ TeamTango complements chat tools (Slack, Microsoft Teams) rather than replacing 
 ## Links
 
 - [Waitlist and product overview](https://teamtango.io/): the landing page, including a feature FAQ
-- [Roadmap](https://teamtango.io/roadmap): what's shipped (team wall, kudos, events, gift funds, time off, org management), in progress (AI post categorization, insights, real-time feed), and planned (automations, integrations, multi-language)
+- [Roadmap](https://teamtango.io/roadmap): what's shipped (team wall, kudos, real-time feed, AI post categorization, events, gift funds, time off, org management, insights, team pulse, automations, chat integrations), in progress (account and data controls), and planned (Google sign-in, polls, global search, kudos rewards, calendar integrations, multi-language)
 - [Changelog](https://teamtango.io/changelog): dated release history, also available as RSS at https://teamtango.io/feed.xml
 - [TeamTango vs Workvivo](https://teamtango.io/vs/workvivo): Workvivo targets enterprises; TeamTango is the lightweight alternative for small/mid-size teams with built-in time-off management
 - [TeamTango vs Slack](https://teamtango.io/vs/slack): TeamTango complements chat rather than replacing it — a persistent culture layer for recognition, celebrations, and PTO

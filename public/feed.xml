@@ -5,8 +5,86 @@
   <link>https://teamtango.io/changelog</link>
   <description>What we've shipped in TeamTango, the team engagement platform.</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 10 Jun 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 01 Oct 2026 12:00:00 +0000</lastBuildDate>
   <atom:link href="https://teamtango.io/feed.xml" rel="self" type="application/rss+xml"/>
+
+  <item>
+    <title>Gift funds stay a surprise</title>
+    <link>https://teamtango.io/changelog#2026-08-16-gift-fund-surprise</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-08-16-gift-fund-surprise</guid>
+    <pubDate>Sun, 16 Aug 2026 10:00:00 +0000</pubDate>
+    <description>A gift fund is now invisible to the person it's for, wherever it would otherwise show up. Their own birthday is also left out of the upcoming-birthdays lists they see, so gift planning stays a secret.</description>
+  </item>
+  <item>
+    <title>Mattermost channels</title>
+    <link>https://teamtango.io/changelog#2026-07-13-mattermost</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-07-13-mattermost</guid>
+    <pubDate>Mon, 13 Jul 2026 10:00:00 +0000</pubDate>
+    <description>Mattermost joins Slack and Microsoft Teams as a chat destination: pick a channel and the events to send, and TeamTango posts them there.</description>
+  </item>
+  <item>
+    <title>Your workspace is ready the moment you sign up</title>
+    <link>https://teamtango.io/changelog#2026-07-13-signup-workspace</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-07-13-signup-workspace</guid>
+    <pubDate>Mon, 13 Jul 2026 09:00:00 +0000</pubDate>
+    <description>Signing up now creates your workspace straight away. Setup is two short steps — name it, invite your team — and people you invite join your workspace instead of getting one of their own.</description>
+  </item>
+  <item>
+    <title>Automations</title>
+    <link>https://teamtango.io/changelog#2026-06-21-automations</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-21-automations</guid>
+    <pubDate>Sun, 21 Jun 2026 17:00:00 +0000</pubDate>
+    <description>TeamTango can now post birthdays, work anniversaries, and new joiners to the wall on its own, and send a weekly digest email. Each automation is off until an admin switches it on.</description>
+  </item>
+  <item>
+    <title>Slack, Microsoft Teams, and webhooks</title>
+    <link>https://teamtango.io/changelog#2026-06-21-integrations</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-21-integrations</guid>
+    <pubDate>Sun, 21 Jun 2026 16:00:00 +0000</pubDate>
+    <description>Send new posts, kudos, celebrations, time-off updates, events, and new joiners to a Slack or Microsoft Teams channel — or to any service through signed webhooks with automatic retries.</description>
+  </item>
+  <item>
+    <title>Notifications</title>
+    <link>https://teamtango.io/changelog#2026-06-21-notifications</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-21-notifications</guid>
+    <pubDate>Sun, 21 Jun 2026 15:00:00 +0000</pubDate>
+    <description>A notification bell that updates live, emails for the things that need your attention, and preferences so everyone chooses what reaches their inbox.</description>
+  </item>
+  <item>
+    <title>Real-time feed</title>
+    <link>https://teamtango.io/changelog#2026-06-21-realtime</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-21-realtime</guid>
+    <pubDate>Sun, 21 Jun 2026 14:00:00 +0000</pubDate>
+    <description>New posts, reactions, comments, and pins appear for everyone the moment they happen — no refresh needed.</description>
+  </item>
+  <item>
+    <title>AI post categorization</title>
+    <link>https://teamtango.io/changelog#2026-06-21-ai-categorization</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-21-ai-categorization</guid>
+    <pubDate>Sun, 21 Jun 2026 13:00:00 +0000</pubDate>
+    <description>Write your post and TeamTango suggests whether it's a highlight, kudos, or challenge. You can always change the suggestion before posting.</description>
+  </item>
+  <item>
+    <title>Team calendar and company holidays</title>
+    <link>https://teamtango.io/changelog#2026-06-21-team-calendar</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-21-team-calendar</guid>
+    <pubDate>Sun, 21 Jun 2026 12:00:00 +0000</pubDate>
+    <description>A wallchart of who's off, person by person and day by day. Teams spread across countries see each person's own public holidays, and admins can add company-wide days off.</description>
+  </item>
+  <item>
+    <title>Run gift funds end to end</title>
+    <link>https://teamtango.io/changelog#2026-06-21-gift-funds</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-21-gift-funds</guid>
+    <pubDate>Sun, 21 Jun 2026 11:00:00 +0000</pubDate>
+    <description>Create and close gift funds right from the dashboard widget, not just contribute to them.</description>
+  </item>
+  <item>
+    <title>Profiles, avatars, and in-app help</title>
+    <link>https://teamtango.io/changelog#2026-06-21-profiles-help</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-21-profiles-help</guid>
+    <pubDate>Sun, 21 Jun 2026 10:00:00 +0000</pubDate>
+    <description>Everyone gets a profile page with an uploadable avatar, @mentions link to it, and a new Help page covers getting started, common questions, and keyboard shortcuts.</description>
+  </item>
 
   <item>
     <title>Team Pulse runs on live data</title>
@@ -21,6 +99,13 @@
     <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-10-events</guid>
     <pubDate>Wed, 10 Jun 2026 09:00:00 +0000</pubDate>
     <description>Create team events, RSVP with one tap, and see what's upcoming, happening right now, or already wrapped — complete with attendee lists and live status.</description>
+  </item>
+  <item>
+    <title>Anonymous pulse check-ins</title>
+    <link>https://teamtango.io/changelog#2026-06-10-pulse-checkins</link>
+    <guid isPermaLink="true">https://teamtango.io/changelog#2026-06-10-pulse-checkins</guid>
+    <pubDate>Wed, 10 Jun 2026 08:00:00 +0000</pubDate>
+    <description>Short, rotating check-in questions on how the team is doing, answered right from the wall. Results stay anonymous: no breakdown is shown until at least three people have answered.</description>
   </item>
   <item>
     <title>Comments, plus events and gift funds on the dashboard</title>
