@@ -29,9 +29,10 @@ rsync -avz --delete \
 echo "📦 Installing dependencies on server..."
 ssh $SERVER "source ~/.nvm/nvm.sh && cd $DEPLOY_PATH && npm install --production"
 
-# Restart the application using PM2 (if installed) or systemd
+# systemd (teamtango-waitlist.service) is the only process manager. Never start it
+# under pm2 as well: the two fight over :3001 and whichever loses crash-loops silently.
 echo "🔄 Restarting application..."
-ssh $SERVER "source ~/.nvm/nvm.sh && cd $DEPLOY_PATH && (pm2 restart teamtango-waitlist || pm2 start server.js --name teamtango-waitlist) 2>/dev/null || systemctl restart teamtango-waitlist 2>/dev/null || echo 'Note: Please manually restart the application'"
+ssh $SERVER "systemctl restart teamtango-waitlist && sleep 2 && systemctl is-active teamtango-waitlist && ss -tlnp | grep -q \"pid=\$(systemctl show -p MainPID --value teamtango-waitlist),\" && echo 'systemd owns :3001'"
 
 echo "✅ Deployment complete!"
 echo "🌐 Application should be running at nexus.webarch.ro"

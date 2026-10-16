@@ -23,7 +23,7 @@
     <meta property="og:image" content="https://teamtango.io/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="TeamTango logo — Where Teams Connect, Celebrate, and Thrive">
+    <meta property="og:image:alt" content="TeamTango — recognition that doesn't scroll away. The team wall with kudos, stats and Team Pulse.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -82,6 +82,13 @@
           "description": "All-in-one team engagement platform for sharing highlights, giving kudos, celebrating milestones, and managing time off",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Web-based",
+          "screenshot": [
+            "https://teamtango.io/img/app-hero.webp",
+            "https://teamtango.io/img/feature-recognition.webp",
+            "https://teamtango.io/img/feature-pulse.webp",
+            "https://teamtango.io/img/feature-time-off.webp",
+            "https://teamtango.io/img/feature-insights.webp"
+          ],
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -879,6 +886,49 @@
             color: var(--slate-500);
         }
 
+        /* ============ Product shots ============ */
+
+        /* Breaks out of the 39rem column so screenshots stay legible */
+        .shot-wide {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(64rem, calc(100vw - 2rem));
+            margin: 2.75rem 0 3rem;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .shot-wide img,
+        .showcase img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .showcase {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(56rem, calc(100vw - 2rem));
+            margin: 3.5rem 0 1rem;
+        }
+
+        .showcase-heading {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+
+        .showcase figure {
+            margin: 0 0 1.5rem;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #fff;
+        }
+
         /* ============ Responsive ============ */
 
         @media (max-width: 640px) {
@@ -1010,6 +1060,11 @@
                 <p class="social-proof-text">Join teams already on the waitlist</p>
             </div>
         </section>
+
+        <figure class="shot-wide">
+            <img src="/img/app-hero.webp" width="2000" height="1250" fetchpriority="high"
+                 alt="The TeamTango app: the team wall with kudos, posts and engagement stats on desktop, and the weekly Team Pulse question on a phone">
+        </figure>
 
         <!-- Feed -->
         <div class="feed-divider" aria-hidden="true">This is what your team wall looks like</div>
@@ -1160,6 +1215,26 @@
                     </div>
                 </div>
             </article>
+        </section>
+
+        <section class="showcase" aria-labelledby="showcase-heading">
+            <h2 class="showcase-heading" id="showcase-heading">Inside the app</h2>
+            <figure>
+                <img src="/img/feature-recognition.webp" width="1600" height="1143" loading="lazy"
+                     alt="Recognition: kudos and work-anniversary posts on the team wall, and a gift fund collecting contributions for a teammate's anniversary">
+            </figure>
+            <figure>
+                <img src="/img/feature-pulse.webp" width="1600" height="1006" loading="lazy"
+                     alt="Team Pulse: one anonymous question a week, answered with a slider, and the team heartbeat chart trending over time">
+            </figure>
+            <figure>
+                <img src="/img/feature-time-off.webp" width="1600" height="1029" loading="lazy"
+                     alt="Time off: the team availability calendar showing who is on vacation, sick or personal leave, grouped by department">
+            </figure>
+            <figure>
+                <img src="/img/feature-insights.webp" width="1600" height="1143" loading="lazy"
+                     alt="Insights: reaction breakdown across the team and a ranked list of top contributors by engagement">
+            </figure>
         </section>
 
         <!-- FAQ -->
